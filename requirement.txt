@@ -25,3 +25,4 @@ termcolor==1.1.0
 tf-estimator-nightly==1.14.0.dev2019030115
 Werkzeug==1.0.1
 whitenoise==5.0.1
+django-heroku
