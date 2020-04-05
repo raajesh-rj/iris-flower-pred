@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div ng-app="flwApp">
+    <div class="" style="text-align: center;">
+        <h3>Welcome to Iris Flower Predictions</h3>
+    </div>
+    <div ng-controller="flwController">
+        <table class="table table-responsive">
+            <thead>
+                <tr colspan="2">
+                    <th>
+                        <span>Please Enter Following all four value in float</span>
+                    </th>
+                </tr>    
+            </thead>
+            <tbody>
+                <tr ng-repeat="input in form">
+                    <td>{{input.label}}</td>
+                    <td>
+                        <input type="text" ng-model="input.value" ng-if="input.type=='text'" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<div class="portlet">
+    <table Width="100">
+        <tr>
+            <td>Sepal Length</td>
+            <td><input type="text" id="sepal_length"></td>
+        </tr>
+        <tr>
+            <td>Sepal Width</td>
+            <td><input type="text" id="sepal_width"></td>
+        </tr>
+        <tr>
+            <td>Petal Length</td>
+            <td><input type="text" id="petal_length" ></td>
+        </tr>
+        <tr>
+            <td>Petal Width</td>
+            <td><input type="text" id="petal_width"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="Submit" onclick="submit();"></td>
+            <td> <input type="button" value="Clear" onclick="clear();"></td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}

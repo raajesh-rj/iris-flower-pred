@@ -1,0 +1,27 @@
+.errorlist {
+    display: none !important;
+}
+
+label {
+    width: 30%;
+}
+
+#submit {
+    margin-left: 43%;
+}
+
+form {
+    margin-top: 3.5em;
+}
+
+.welcome {
+    margin-top: 1.5em;
+}
+
+body {
+    background-color:skyblue;
+}
+
+.response, .welcome {
+    text-align: center;
+}

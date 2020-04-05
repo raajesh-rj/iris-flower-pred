@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container">
+    <div class="welcome">
+        <h3>Welcome to Iris Flower Predictions</h3>
+    </div>
+
+    <div class="col-12 content panel">
+        <form id="iris_form" method="post" class="form col-md-4 mx-auto">
+
+            {% csrf_token %}
+            {{ flower_form.as_p }}
+            
+            <input type="submit" value="Predict" name="" id="submit">
+            
+        </form>
+    </div>
+
+    {% if flower_prediction %}
+        <p class="response">Your predicted flower is <b>{{flower_prediction}}</b></p>
+    {% endif %}
+
+</div>
+
+{% endblock %}
