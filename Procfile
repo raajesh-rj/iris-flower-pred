@@ -1,1 +1,1 @@
-web: gunicorn irisflower.wsgi
+web: gunicorn irisflower.wsgi --log-file -
